@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'   // Must match Jenkins tool name
+        maven 'Maven'   
     }
 
     stages {
@@ -27,13 +27,7 @@ pipeline {
 
         stage('Deploy WAR to Tomcat') {
             steps {
-                sh '''
-
-                echo "Copying new WAR..."
-                cp target/MymavenWebApp_test1.war /opt/tomcat/webapps/
-
-                
-                '''
+                sh 'cp target/MymavenWebApp_test1.war /opt/tomcat/webapps/'
             }
         }
     }
