@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/PrathwishShetty03/MymavenWebApp01.git'
+                git branch: 'main', url: 'https://github.com/PrathwishShetty03/MymavenWebApp_test1.git'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
                 sh '''
 
                 echo "Copying new WAR..."
-                cp target/MymavenWebApp01.war /opt/tomcat/webapps/
+                cp target/MymavenWebApp_test1.war /opt/tomcat/webapps/
 
                 
                 '''
